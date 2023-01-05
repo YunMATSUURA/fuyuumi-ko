@@ -1,0 +1,214 @@
+'utf-8';
+
+.l-works-page {
+  text-align: center;
+  font-size: 22px;
+}
+
+.c-navigation-link {
+  list-style: none;
+  cursor: pointer;
+  /* filter: drop-shadow(0px 2px black); */
+}
+
+.c-works-container {
+  width: 360px;
+  margin: 16px auto;
+  /* background-color: gray; */
+  display:flex;
+  flex-wrap: wrap;
+  gap: calc((360px - 96px * 3 ) / 2);
+  justify-content: space-between;
+}
+
+.c-each-work-img {
+  width: 96px;
+  height: 96px;
+  border-radius: 10%;
+  object-fit: cover;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+
+.c-works-box {
+  margin: 0;
+  width: 96px;
+  height: 128px;
+  /* outline: red solid; */
+}
+
+
+.c-works-box:hover {
+  /* opacity: .9; */
+  opacity: 1;
+}
+
+.c-each-work-img.selected {
+  border-radius: 0%;
+  opacity: 1;
+  margin: 0 auto;
+  width: 360px;
+  height: auto;
+  position: fixed;
+  top: 160px;
+  bottom: 0;
+  right: 0;
+  left: 8px;
+  transition-duration: 0.2s;
+}
+
+.c-each-work-p {
+  margin: 0;
+  size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+#c-close {
+  cursor: pointer;
+  border-radius: 300%;
+  width: 96px;
+  text-align: center;
+  margin: 16px auto;
+  text-decoration: none;
+  color: white;
+  background-color: gray;
+}
+
+#c-mask {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#c-mask.hidden {
+  display: none;
+}
+
+
+#c-modal {
+  background: #fff;
+  width: 300px;
+  padding: 20px;
+  border-radius: 4px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: transform 0.4s;
+  z-index: 2;
+}
+
+#c-modal.hidden {
+  transform: translate(0, -500px);
+}
+
+#c-modal > p {
+  margin: 0 0 20px;
+}
+
+.c-requestForm {
+  margin: 16px auto;
+  width: 300px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.c-requestForm div + div {
+  margin-top: 8px;
+}
+
+.c-eachQuestion {
+  display: flex;
+  flex-direction: column;
+}
+
+.c-inputBox {
+  font-size: 16px;
+  height: 20px;
+}
+
+.c-form-caution {
+  margin: 0;
+  height: 16px;
+  font-size: 14px;
+  color: red;
+}
+
+.c-button {
+  margin: 16px auto;
+  border-color: rgba(0, 0, 0, 0.0);
+  text-decoration: none;
+  width: 96px;
+  height: 32px;
+  background-color: rgb(153, 204, 204);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 3px gray;
+}
+
+.c-button:hover {
+  /* transform: translateY(-1px); */
+  opacity: .9;
+}
+
+.c-button:active {
+  transform: translateY(2px);
+  /* border-color: rgb(153, 204, 204); */
+  box-shadow: 0 1px gray;
+}
+
+.c-requestLabel {
+  font-size: 16px;
+}
+
+.noteInformation {
+  margin-top: 32px;
+  font-size: 16px;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+
+  .c-works-container {
+    width: 540px;
+    margin: 16px auto;
+    display:flex;
+    flex-wrap: wrap;
+    gap: calc(((360px - 144px * 3 ) / 2);
+    justify-content: space-between;
+  }
+
+  .c-each-work-img.selected {
+    border-radius: 0%;
+    opacity: 1;
+    margin: 0 auto;
+    width: 500px;
+    height: auto;
+    position: fixed;
+    top: 180px;
+    bottom: 0;
+    right: 0;
+    left: 8px;
+    transition-duration: 0.2s;
+  }
+
+  .c-requestLabel {
+    font-size: 20px;
+  }
+
+  .c-inputBox {
+    font-size: 20 px;
+  }
+
+}
